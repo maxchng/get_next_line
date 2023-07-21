@@ -6,7 +6,7 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 15:01:28 by ychng             #+#    #+#             */
-/*   Updated: 2023/06/28 16:36:16 by ychng            ###   ########.fr       */
+/*   Updated: 2023/07/22 00:06:28 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*has_newline_character(char *s)
 	return (NULL);
 }
 
-int	ft_strlen(char *s)
+int	gnl_strlen(char *s)
 {
 	int	i;
 
@@ -36,13 +36,13 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*gnl_strjoin(char *s1, char *s2)
 {
 	char	*joined_buffer;
 	int		i;
 	int		j;
 
-	joined_buffer = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	joined_buffer = malloc(gnl_strlen(s1) + gnl_strlen(s2) + 1);
 	if (!joined_buffer)
 	{
 		free(s1);
@@ -62,7 +62,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (joined_buffer);
 }
 
-void	ft_strcpy(char *s1, char *s2)
+void	gnl_strcpy(char *s1, char *s2)
 {
 	int	j;
 

@@ -6,7 +6,7 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 15:01:19 by ychng             #+#    #+#             */
-/*   Updated: 2023/06/28 16:34:39 by ychng            ###   ########.fr       */
+/*   Updated: 2023/07/22 00:00:31 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*read_file_into_buffer(int fd, char *partial_buffer)
 		if (bytes_read <= 0)
 			break ;
 		read_buffer[bytes_read] = '\0';
-		partial_buffer = ft_strjoin(partial_buffer, read_buffer);
+		partial_buffer = gnl_strjoin(partial_buffer, read_buffer);
 	}
 	free(read_buffer);
 	if (bytes_read == -1)
@@ -75,13 +75,13 @@ char	*extract_after_newline(char *partial_buffer)
 		free(partial_buffer);
 		return (NULL);
 	}
-	remaining_buffer = malloc(sizeof(char) * (ft_strlen(partial_buffer) - i));
+	remaining_buffer = malloc(sizeof(char) * (gnl_strlen(partial_buffer) - i));
 	if (!remaining_buffer)
 	{
 		free(partial_buffer);
 		return (NULL);
 	}
-	ft_strcpy(remaining_buffer, &partial_buffer[i + 1]);
+	gnl_strcpy(remaining_buffer, &partial_buffer[i + 1]);
 	free(partial_buffer);
 	return (remaining_buffer);
 }

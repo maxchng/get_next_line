@@ -6,7 +6,7 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:16:36 by ychng             #+#    #+#             */
-/*   Updated: 2023/06/28 18:16:43 by ychng            ###   ########.fr       */
+/*   Updated: 2023/07/22 00:01:28 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char	*get_next_line(int fd);
 
 // get_next_line_utils_bonus
 char	*has_newline_character(char *s);
-int		ft_strlen(char *s);
-char	*ft_strjoin(char *s1, char *s2);
-void	ft_strcpy(char *s1, char *s2);
+int		gnl_strlen(char *s);
+char	*gnl_strjoin(char *s1, char *s2);
+void	gnl_strcpy(char *s1, char *s2);
 
 #endif
